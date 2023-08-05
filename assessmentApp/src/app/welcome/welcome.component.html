@@ -1,4 +1,4 @@
-<div class="container bg-light py-5">
+<div class="container bg-light py-5 mt-5">
     <h1>Welcome to Assessment</h1>
     <p class="col-md8 fs-4">This assessment contains 9 questions. Each question has holds 10 questions</p>
     <h4>Rules:</h4>
@@ -10,7 +10,7 @@
     <h1 style = "text-align: center">All the best</h1>
     <div class="name col-md-4 my-3">
         <label for="">Enter your student Id:</label>
-        <input type="text" class="form-control">
+        <input #student_name type="text" class="form-control">
     </div>
-    <button class="btn btn-primary btn-lg" routerLink="/questions">Start Assessment</button>
+    <button class="btn btn-primary btn-lg" routerLink="/questions" (click)="startAssessment()">Start Assessment</button>
 </div>

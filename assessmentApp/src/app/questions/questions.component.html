@@ -1,1 +1,60 @@
-<p>questions works!</p>
+<div class = "container mt-5">
+    <div class = "card">
+        <div class="d-flex justify-content-between p-3">
+            <div class="image">
+                <img src="" width="50" alt="logo">
+            </div>
+            <div class="quiz-header">
+                <h4 style = "font-family: 'Courier New', Courier, monospace;">Angular & TypeScript Quiz!</h4>
+                <span style = "font-style: italic;">Welcome {{name}}</span>
+
+            </div>
+        </div>
+        <ng-container *ngIf="!isCompleted">
+        <div class="d-flex justify-content-around py-3">
+            <div class="score">
+                <h5> {{points}} Points</h5>
+            </div>
+            <div class="questions-remain">
+                <span style="font-style: italic;">Question {{thisQuestion+1}} of {{questions.length}}</span>
+            </div>
+            <div class="timer">
+               <h5>{{counter}} sec ⏲️</h5> 
+            </div>
+        </div>
+        <div class="progress mb-2" role="progressbar" aria-label="Basic example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" >
+            <div class="progress-bar" [ngStyle]="{'width': progress+'%'}"></div>
+        </div>
+        <div class="question">
+            <div class="card">
+                <h3> {{questions[thisQuestion].questionText}} </h3>
+            </div>
+        </div>
+        <div class="options">
+            <ol *ngFor="let option of questions[thisQuestion]?.options">
+                <li (click) ="checkAnswer(thisQuestion+1, option)">
+                    <div appChangeBorder [isCorrect] = "option.correct" class="card">
+                        {{option.text}}
+                    </div>
+                </li>
+            </ol>
+        </div>
+        <div class="d-flex justify-content-between">
+            <button [disabled] ="thisQuestion===0" class="btn" (click)="prevQuestion()"><i class="fa text-primary fa-chevron-left fa-2x" aria-hidden="true"></i></button>
+            <button class="btn" (click)="resetAssessment()"><i class="fa text-primary fa-refresh fa-2x" aria-hidden="true"></i></button>
+            <button [disabled] ="thisQuestion===questions.length - 1" class="btn" (click)="nextQuestion()"><i class="fa text-primary fa-chevron-right fa-2x" aria-hidden="true"></i></button>
+        </div>
+        </ng-container>
+        <ng-container *ngIf="isCompleted">
+            <div class="result text-center col-md-6 col-sm-12">
+                <h3>Congratulations!! <br>You have completed the assessment</h3>
+                <p>Total Questions Attempted: {{questions.length}}</p>
+                <p>Total Corret Answered: {{correctAns}} </p>
+                <p>Total Wrong Answered: {{inCorrectAns}}</p>
+                <p>Your Score : {{points}}</p>
+            </div>
+        </ng-container>
+ 
+
+    </div>
+</div>
