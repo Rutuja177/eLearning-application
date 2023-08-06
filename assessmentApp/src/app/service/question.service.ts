@@ -12,4 +12,5 @@ export class QuestionService {
   getJsonQuestions(){
     return this.http.get<any>("assets/questions.json");
   }
+  
 }

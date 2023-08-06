@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { QuestionService } from '../service/question.service';
+import {HttpClient} from '@angular/common/http';
 import { interval } from 'rxjs';
 
 @Component({
@@ -19,7 +20,9 @@ export class QuestionsComponent {
   counter = 60;
   interval$:any;
   public progress : string="0";
-  constructor (private questionService : QuestionService) {}
+  public std_name:any;
+  public grds: any;
+  constructor (private questionService : QuestionService, private http : HttpClient) {}
 
   ngOnInit(): void{
     this.name = localStorage.getItem("name")!;
@@ -30,7 +33,7 @@ export class QuestionsComponent {
   getAssessmentQuestions(){
     this.questionService.getJsonQuestions()
      .subscribe(res=>{
-      console.log(res.questions);
+      // console.log(res.questions);
       this.questions = res.questions;
      })
   }
@@ -42,11 +45,40 @@ export class QuestionsComponent {
   prevQuestion(){
     this.thisQuestion--;
   }
+  sendData(std_name:any, grds: any){
+    const studentData = {
+      name: std_name,
+      grade: grds
+    };
+
+    this.http.post('http://localhost:3000/api/student', studentData)
+      .subscribe(
+        (response) => {
+          console.log('Data sent successfully:', response);
+        },
+        (error) => {
+          console.error('Error sending data:', error);
+        }
+      );
+
+    this.http.post('http://localhost:3000/api/send-to-moodle', studentData)
+        .subscribe(
+          (response1) =>{
+            console.log('Data sent successfully:', response1);
+          },
+          (error) =>{
+            console.error('Error sending data:', error);
+          }
+        );
+  }
+  
   checkAnswer(currQuestion:number, option:any){
     if(currQuestion === this.questions.length){
       this.isCompleted = true;
       this.stopTimer();
+      this.sendData(this.name, this.points)
       console.log(this.name, this.points);
+      
     }
     if(option.correct){
       this.points+=10;
@@ -105,6 +137,6 @@ export class QuestionsComponent {
     return this.progress;
   }
   
-  
+
 }
 

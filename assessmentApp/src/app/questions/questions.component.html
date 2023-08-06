@@ -2,10 +2,10 @@
     <div class = "card">
         <div class="d-flex justify-content-between p-3">
             <div class="image">
-                <img src="" width="50" alt="logo">
+                <img src="/assets/assessment.png" width="50" alt="logo">
             </div>
             <div class="quiz-header">
-                <h4 style = "font-family: 'Courier New', Courier, monospace;">Angular & TypeScript Quiz!</h4>
+                <h4 style = "font-family: 'Courier New', Courier, monospace;">Python Assessment</h4>
                 <span style = "font-style: italic;">Welcome {{name}}</span>
 
             </div>
@@ -46,12 +46,12 @@
         </div>
         </ng-container>
         <ng-container *ngIf="isCompleted">
-            <div class="result text-center col-md-6 col-sm-12">
+            <div class="result text-center">
                 <h3>Congratulations!! <br>You have completed the assessment</h3>
                 <p>Total Questions Attempted: {{questions.length}}</p>
                 <p>Total Corret Answered: {{correctAns}} </p>
                 <p>Total Wrong Answered: {{inCorrectAns}}</p>
-                <p>Your Score : {{points}}</p>
+                <p>Your Grade : {{points}}</p>
             </div>
         </ng-container>
  

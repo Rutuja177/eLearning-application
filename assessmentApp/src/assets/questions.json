@@ -1,165 +1,175 @@
 {
-    "questions": [{
-            "questionText": "Which of the following does TypeScript use to specify types?",
-            "options": [{
-                    "text": ":",
+    "questions": [
+        {
+            "questionText": "Which built-in function is used to sort a list in Python?",
+            "options": [
+                {
+                    "text": "sorted()",
                     "correct": true
                 },
                 {
-                    "text": ";"
+                    "text": "sort()"
                 },
                 {
-                    "text": "!"
+                    "text": "order()"
                 },
                 {
-                    "text": "&"
+                    "text": "arrange()"
                 }
             ],
-            "explanation": "TS uses a colon (:) to separate the property name from the property type"
+            "explanation": "The 'sorted()' function is used to sort a list in Python."
         },
         {
-            "questionText": "Which of the following is NOT a type used in TypeScript?",
-            "options": [{
-                    "text": "number"
+            "questionText": "Which of the following is the correct way to open and read a text file in Python?",
+            "options": [
+                {
+                    "text": "file = open(\"file.txt\", \"read\")"
                 },
                 {
-                    "text": "string"
+                    "text": "file = open(\"file.txt\")"
                 },
                 {
-                    "text": "boolean"
+                    "text": "file = read(\"file.txt\", \"r\")"
                 },
                 {
-                    "text": "enum",
+                    "text": "file = open(\"file.txt\", \"r\")",
                     "correct": true
                 }
             ],
-            "explanation": "enum is not used as a type in TypeScript"
+            "explanation": "To open and read a text file in Python, you use the 'open()' function with the mode 'r' for reading."
         },
         {
-            "questionText": "How can we specify properties and methods for an object in TypeScript?",
-            "options": [{
-                    "text": "Use classes."
+            "questionText": "In Python, what does the self keyword represent within a class?",
+            "options": [
+                {
+                    "text": "It refers to the parent class."
                 },
                 {
-                    "text": "Use interfaces.",
+                    "text": "It refers to the current instance of the class.",
                     "correct": true
                 },
                 {
-                    "text": "Use enums."
+                    "text": "It is used to define static methods."
                 },
                 {
-                    "text": "Use async/await."
+                    "text": " It is used to access global variables."
                 }
             ],
-            "explanation": "interfaces are typically used to list the properties and methods for an object"
+            "explanation": ""
         },
         {
-            "questionText": "How else can Array<number> be written in TypeScript?",
-            "options": [{
-                    "text": "@number"
+            "questionText": "Which of the following data types is used to store a single character in Python?",
+            "options": [
+                {
+                    "text": "char"
                 },
                 {
-                    "text": "number[]",
+                    "text": "str",
                     "correct": true
                 },
                 {
-                    "text": "number!"
+                    "text": "character"
                 },
                 {
-                    "text": "number?"
+                    "text": "char"
                 }
             ],
-            "explanation": "number[] is another way of writing Array<number> in TypeScript"
+            "explanation": "In Python, a single character is also represented as a string of length 1."
         },
         {
-            "questionText": "In which of these does a class take parameters?",
-            "options": [{
-                    "text": "constructor",
+            "questionText": "What is the output of the following code snippet?\nmy_list = [1, 2, 3, 4, 5]\n print(my_list[2])",
+            "options": [
+                {
+                    "text": "3",
                     "correct": true
                 },
                 {
-                    "text": "destructor"
+                    "text": "1"
                 },
                 {
-                    "text": "import"
+                    "text": "2"
                 },
                 {
-                    "text": "subscribe"
+                    "text": "4"
                 }
             ],
-            "explanation": "a constructor is used by a class to take in parameters"
+            "explanation": "Indexing in Python starts from 0, so 'my_list[2]' accesses the third element of the list, which is 3."
         },
         {
-            "questionText": "Which is NOT an access modifier?",
-            "options": [{
-                    "text": "private"
+            "questionText": "Which of the following loops is used for iterating over a sequence of numbers in Python?",
+            "options": [
+                {
+                    "text": "while"
                 },
                 {
-                    "text": "protected"
+                    "text": "sequence"
                 },
                 {
-                    "text": "public"
+                    "text": "do-while"
                 },
                 {
-                    "text": "async",
+                    "text": "for",
                     "correct": true
                 }
             ],
-            "explanation": "async is not used as an access modifier type in TypeScript"
+            "explanation": "The 'for' loop is commonly used to iterate over sequences, including lists, tuples, and ranges."
         },
         {
-            "questionText": "Which keyword allows us to share information between files in TypeScript?",
-            "options": [{
-                    "text": "import"
+            "questionText": "What is the purpose of the len() function in Python?",
+            "options": [
+                {
+                    "text": "To find the largest element in a list"
                 },
                 {
-                    "text": "export",
+                    "text": "To get the length (number of elements) of a list",
                     "correct": true
                 },
                 {
-                    "text": "async"
+                    "text": "To calculate the total of all elements in a list"
                 },
                 {
-                    "text": "constructor"
+                    "text": "To find the average of all elements in a list"
                 }
             ],
-            "explanation": "the export keyword allows for the information to be transmitted between files"
+            "explanation": "The 'len()' function returns the number of elements in a given iterable, such as a list or a string."
         },
         {
-            "questionText": "Which is an array method to generate a new array based on a condition?",
-            "options": [{
-                    "text": "filter",
+            "questionText": "Which operator is used for exponentiation in Python?",
+            "options": [
+                {
+                    "text": "**",
                     "correct": true
                 },
                 {
-                    "text": "map"
+                    "text": "^"
                 },
                 {
-                    "text": "async"
+                    "text": "^^"
                 },
                 {
-                    "text": "enum"
+                    "text": "//"
                 }
             ],
-            "explanation": "filter is a method used to conditionally create a new array"
+            "explanation": "The '**' operator is used for exponentiation in Python. For example, '2 ** 3' evaluates to 8."
         },
         {
-            "questionText": "How is a property accessible within a class?",
-            "options": [{
-                    "text": "Using this.propertyName",
+            "questionText": "What is the correct way to define a function in Python?",
+            "options": [
+                {
+                    "text": "def my_function():",
                     "correct": true
                 },
                 {
-                    "text": "Accessors"
+                    "text": "function my_function():"
                 },
                 {
-                    "text": "Destructuring"
+                    "text": "def my_function:"
                 },
                 {
-                    "text": "Arrow function"
+                    "text": "define my_function():"
                 }
             ],
-            "explanation": "this.propertyName is the way to access a specific property within a class"
+            "explanation": "The correct syntax for defining a function in Python is using the def keyword, followed by the function name and parentheses."
         }
     ]
 }
