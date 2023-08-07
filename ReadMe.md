@@ -67,8 +67,8 @@ Once the application is running, you can explore its features, including taking 
 
 Here are some screenshots of the E-Learning application:
 
-![Screenshot 1](img1.png)
-![Screenshot 2](img2.png)
+![Screenshot 1](Img1.png)
+![Screenshot 2](Img2.png)
 
 ## Additional Notes
 
