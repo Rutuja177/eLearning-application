@@ -29,8 +29,9 @@ Navigate to the project's root directory in your terminal and install the requir
 ```bash
 cd Server
 npm install
+```
 
-### 3. Start the Backend Server
+### 4. Start the Backend Server
 
 Navigate to the server directory using the following commands:
 
@@ -47,11 +48,11 @@ node server.js
 
 The backend server should now be running locally at `http://localhost:3000`.
 
-### 4. Launch the Application
+### 5. Launch the Application
 
 Open your web browser and go to `http://localhost:3000` to verify that the backend server is working correctly.
 
-### 5. Explore the Application
+### 6. Explore the Application
 
 Once the application is running, you can explore its features, including taking assessments and viewing your grades.
 
