@@ -2,6 +2,8 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const client = require('./database');
 const cors = require('cors'); 
+const path = require('path');
+
 
 const app = express();
 const port  = process.env.PORT || 3000;
@@ -10,6 +12,10 @@ client.connect();
 
 app.use(cors());
 app.use(bodyParser.json());
+
+// app.use(express.static('dist'));
+app.use(express.static(path.join(__dirname, '../dist/assessment-app')));
+
 
 // app.get('/', (req, res)=>{
 //     console.log("You are connected to the server");
@@ -40,6 +46,12 @@ app.post('/api/student', (req, res)=>{
         }
     })
 })
+
+// All other routes serve the Angular app
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, '../dist/assessment-app/index.html'));
+});
+
 app.listen(port, ()=>{
     console.log(`Server is running on port ${port}`);
 });

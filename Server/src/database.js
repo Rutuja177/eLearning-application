@@ -2,7 +2,7 @@ const {Client} = require('pg');
 
 const client = new Client({
     //host: "localhost",
-    host: "/cloudsql/amesite-assessment-rutuja:us-south1:studentgrades/.s.PGSQL.5432",
+    host: "amesite-assessment-rutuja:us-south1:studentgrades",
     port: 5432,
     user: "postgres",
     password: "root",

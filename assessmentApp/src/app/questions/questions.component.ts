@@ -51,7 +51,7 @@ export class QuestionsComponent {
       grade: grds
     };
 
-    this.http.post('http://localhost:3000/api/student', studentData)
+    this.http.post('http://34.174.111.114:3000/api/student', studentData)
       .subscribe(
         (response) => {
           console.log('Data sent successfully:', response);
@@ -61,15 +61,15 @@ export class QuestionsComponent {
         }
       );
 
-    this.http.post('http://localhost:3000/api/send-to-moodle', studentData)
-        .subscribe(
-          (response1) =>{
-            console.log('Data sent successfully:', response1);
-          },
-          (error) =>{
-            console.error('Error sending data:', error);
-          }
-        );
+    // this.http.post('http://localhost:3000/api/send-to-moodle', studentData)
+    //     .subscribe(
+    //       (response1) =>{
+    //         console.log('Data sent successfully:', response1);
+    //       },
+    //       (error) =>{
+    //         console.error('Error sending data:', error);
+    //       }
+    //     );
   }
   
   checkAnswer(currQuestion:number, option:any){
