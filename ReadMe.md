@@ -1,6 +1,6 @@
 # E-Learning Application Setup Guide
 
-Welcome to the E-Learning application! This platform enables learners to take assessments on various courses and automatically sends their grade data to Moodle using Moodle web services. The frontend is built with Angular, the backend with Node.js and Express.js, and the database uses PostgreSQL. The application is hosted on Google Cloud Platform (GCP).
+Welcome to the E-Learning application! This platform enables learners to take assessments on various courses and sends their grade data to PostgreSQL. The frontend is built with Angular, the backend with Node.js and Express.js, and the database uses PostgreSQL. The application is hosted on Google Cloud Platform (GCP).
 
 ## Getting Started
 
