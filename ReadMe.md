@@ -72,7 +72,7 @@ Here are some screenshots of the E-Learning application:
 
 ## Additional Notes
 
-- The application is hosted on Google Cloud Platform (GCP) at the following URL: http://34.174.111.114:3000/
+- The application is hosted on Google Cloud Platform (GCP) at the following URL: https://amesite-assessment-rutuja.uc.r.appspot.com
 - Make sure to have Node.js and npm installed on your machine before starting the application setup.
 
 Feel free to reach out to me @rutuja.dukhande7@gmail.com for any assistance or questions related to the setup and usage of the E-Learning application.

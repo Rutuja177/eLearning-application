@@ -16,13 +16,6 @@ app.use(bodyParser.json());
 // app.use(express.static('dist'));
 app.use(express.static(path.join(__dirname, '../dist/assessment-app')));
 
-
-// app.get('/', (req, res)=>{
-//     console.log("You are connected to the server");
-//     console.log("Error");
-//     res.send("You are connected to the server");
-// });
-
 app.get('/api/student-grades', (req, res)=>{
     client.query('SELECT * FROM students', (err, result)=>{
         if(err){
